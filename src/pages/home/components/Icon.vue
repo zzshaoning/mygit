@@ -16,12 +16,16 @@
 
 <script>
     export default {
-        name:"HomeIcon",
+        name:"HomeIcons",
         props: {
           list:Array
         },
-        data:{
-         autoplay:false
+        data(){
+         return {
+           swiperOption:{
+             autoPlay:false
+           }
+           }
         },
         computed:{
           pages () {
