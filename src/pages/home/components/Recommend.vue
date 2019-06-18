@@ -5,7 +5,7 @@
       <router-link
         tag="li"
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
         :to="'/detail/' + item.id"
       >
@@ -21,37 +21,12 @@
 </template>
 
 <script>
+
 export default {
   name: 'HomeRecommend',
-  data () {
-      return {
-          recommendList:[{
-            id:'0001',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1505/d1/3070ad726f861b.jpg_r_640x214_39709b85.jpg',
-            title:'石家庄必游TOP5',
-            desc:'旅游资源丰富，名胜古迹众多'
-            },
-            {
-            id:'0002',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1505/d1/3070ad726f861b.jpg_r_640x214_39709b85.jpg',
-            title:'石家庄必游TOP5',
-            desc:'旅游资源丰富，名胜古迹众多'
-            },
-            {
-            id:'0003',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1505/d1/3070ad726f861b.jpg_r_640x214_39709b85.jpg',
-            title:'石家庄必游TOP5',
-            desc:'旅游资源丰富，名胜古迹众多'
-            },
-            {
-            id:'0004',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1505/d1/3070ad726f861b.jpg_r_640x214_39709b85.jpg',
-            title:'石家庄必游TOP5',
-            desc:'旅游资源丰富，名胜古迹众多'
-            }
-            ]
-        }
-      } 
+  props:{
+    list:Array
+  } 
   }
 </script>
 
